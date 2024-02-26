@@ -1,0 +1,579 @@
+{
+    "invoice_uuid": "dc4d51de-1e63-4a73-816d-6ad1770c2f2d",
+    "invoice_date": "2024-02-19",
+    "invoice_number": "BOL202400001",
+    "contract_number": "14914",
+    "invoice_json": {
+        "invoice_date": "2024-02-19",
+        "invoice_number": "BOL202400001",
+        "invoice_period": {
+            "start": "2024-01-01",
+            "end": "2024-01-31"
+        },
+        "client": {
+            "uuid": "c2a9f92c-eb18-4c7c-8933-5e9f34baf521",
+            "number": "6538",
+            "address": "FRAZIONE GROSSO 48",
+            "municipality": "Bundschen",
+            "postal_code": "39058",
+            "tax_number": "03009240213"
+        },
+        "contract": {
+            "contract_start": "2024-01-01",
+            "power_committed": 15.0,
+            "power_available": 16.5,
+            "domestic": false,
+            "first_residence": false,
+            "product": "Telmekom Business BTA5",
+            "pod": {
+                "number": "IT250E60020916",
+                "address": "FRAZIONE GROSSO 48",
+                "municipality": "Bundschen",
+                "postal_code": "39058",
+                "voltage": 400
+            }
+        },
+        "payment": {
+            "due_date": "2024-03-10",
+            "status": []
+        },
+        "summary": {
+            "total_consumption_kwh": 1430.8,
+            "total_amount": 2307.19,
+            "payment_due": "2024-03-10",
+            "payment_method": "SEPA direct debit",
+            "tax": {
+                "excise": {
+                    "unit_price": 0.0125,
+                    "total": 17.89
+                },
+                "vat": 416.05,
+                "vat_rate": 22
+            },
+            "components": {
+                "energy": 219.73,
+                "transport": 1559.97,
+                "system": 93.55
+            },
+            "metering": [
+                {
+                    "type": "active",
+                    "date": "2023-12-31",
+                    "f1": 8463.0,
+                    "f2": 3237.0,
+                    "f3": 4377.0,
+                    "estimated": false
+                },
+                {
+                    "type": "reactive",
+                    "date": "2023-12-31",
+                    "f1": 0.0,
+                    "f2": 0.0,
+                    "f3": 0.0,
+                    "estimated": false
+                },
+                {
+                    "type": "peak",
+                    "date": "2023-12-31",
+                    "f1": 18.124,
+                    "f2": 15.484,
+                    "f3": 6.516,
+                    "estimated": false
+                },
+                {
+                    "type": "active",
+                    "date": "2024-01-31",
+                    "f1": 9241.567,
+                    "f2": 3527.218,
+                    "f3": 4739.019,
+                    "estimated": false
+                },
+                {
+                    "type": "reactive",
+                    "date": "2024-01-31",
+                    "f1": 117.93,
+                    "f2": 53.14,
+                    "f3": 27.69,
+                    "estimated": false
+                },
+                {
+                    "type": "peak",
+                    "date": "2024-01-31",
+                    "f1": 11.736,
+                    "f2": 9.416,
+                    "f3": 1.656,
+                    "estimated": false
+                }
+            ],
+            "additional_cost": [],
+            "network_operator": {
+                "name": "Edyna",
+                "tel_number": "800 550522"
+            }
+        },
+        "detail": {
+            "energy": [
+                {
+                    "article_id": 34,
+                    "article_number": "503001",
+                    "label": "PCV",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 0.08493150684931507,
+                    "unit_type": "EUR_per_year",
+                    "unit_price": 162.0,
+                    "total_price": 13.76,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 4,
+                    "article_number": "501003",
+                    "label": "PUN - F3",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 362.0,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.089057,
+                    "total_price": 32.24,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 25,
+                    "article_number": "501011",
+                    "label": "PUN grid_loss - F1",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 778.6,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.0109653,
+                    "total_price": 8.54,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 26,
+                    "article_number": "501012",
+                    "label": "PUN grid_loss - F2",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 290.2,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.0105071,
+                    "total_price": 3.05,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 27,
+                    "article_number": "501013",
+                    "label": "PUN grid_loss - F3",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 362.0,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.0089057,
+                    "total_price": 3.22,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 65,
+                    "article_number": "504007",
+                    "label": "Del. 111/06 - Art. 73 Corr. Servizio Interrompibilità ",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1430.8,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.00153,
+                    "total_price": 2.19,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 64,
+                    "article_number": "504006",
+                    "label": "Del. 111/06 - Art. 48 Corr. Capacità  Produttiva",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1430.8,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.0,
+                    "total_price": 0.0,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 63,
+                    "article_number": "504005",
+                    "label": "Del. 111/06 - Art. 46 Corr. Funzionamento Terna",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1430.8,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.000614,
+                    "total_price": 0.88,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 3,
+                    "article_number": "501002",
+                    "label": "PUN - F2",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 290.2,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.105071,
+                    "total_price": 30.49,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 66,
+                    "article_number": "504008",
+                    "label": "Del. 566/21 - Corr. Mercato della Capacità ",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1430.8,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.0084073,
+                    "total_price": 12.03,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 61,
+                    "article_number": "504003",
+                    "label": "Del. 111/06 - Art. 44bis Corr. Mod. Eolico",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1430.8,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.000145,
+                    "total_price": 0.21,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 60,
+                    "article_number": "504002",
+                    "label": "Del. 111/06 - Art. 44.3 Corr. MSD",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1430.8,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.000823,
+                    "total_price": 1.18,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 32,
+                    "article_number": "501008",
+                    "label": "spread - F3",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 362.0,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.009,
+                    "total_price": 3.26,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 31,
+                    "article_number": "501007",
+                    "label": "spread - F2",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 290.2,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.009,
+                    "total_price": 2.61,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 35,
+                    "article_number": "503002",
+                    "label": "DISPbt",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 0.08493150684931507,
+                    "unit_type": "EUR_per_year",
+                    "unit_price": 0.0,
+                    "total_price": 0.0,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 14,
+                    "article_number": "502001",
+                    "label": "energia verde",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1430.8,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.005,
+                    "total_price": 7.15,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 30,
+                    "article_number": "501006",
+                    "label": "spread - F1",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 778.6,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.009,
+                    "total_price": 7.01,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 62,
+                    "article_number": "504004",
+                    "label": "Del. 111/06 - Art. 45 Corr. Costi Unità  Essenziali",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1430.8,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.004566,
+                    "total_price": 6.53,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 2,
+                    "article_number": "501001",
+                    "label": "PUN - F1",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 778.6,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.109653,
+                    "total_price": 85.38,
+                    "vat_percentage": 0.22
+                }
+            ],
+            "transport": [
+                {
+                    "article_id": 37,
+                    "article_number": "505006",
+                    "label": "DIS",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 0.08493150684931507,
+                    "unit_type": "EUR_per_year",
+                    "unit_price": 5.538,
+                    "total_price": 0.47,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 21,
+                    "article_number": "505017",
+                    "label": "UC6",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 0.08493150684931507,
+                    "unit_type": "EUR_per_year",
+                    "unit_price": 7e-05,
+                    "total_price": 0.0,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 95,
+                    "article_number": "505005",
+                    "label": "UC6",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 0.08493150684931507,
+                    "unit_type": "EUR_per_year",
+                    "unit_price": 1.6824,
+                    "total_price": 0.14,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 39,
+                    "article_number": "505009",
+                    "label": "TRAS",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1430.8,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 1.057,
+                    "total_price": 1512.36,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 36,
+                    "article_number": "505008",
+                    "label": "DIS",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1430.8,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.00065,
+                    "total_price": 0.93,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 38,
+                    "article_number": "505007",
+                    "label": "DIS",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1.273972602739726,
+                    "unit_type": "EUR_per_kW_and_year",
+                    "unit_price": 33.0177,
+                    "total_price": 42.06,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 40,
+                    "article_number": "505010",
+                    "label": "MIS",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 0.08493150684931507,
+                    "unit_type": "EUR_per_year",
+                    "unit_price": 20.9587,
+                    "total_price": 1.78,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 41,
+                    "article_number": "505004",
+                    "label": "UC3",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1430.8,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.00156,
+                    "total_price": 2.23,
+                    "vat_percentage": 0.22
+                }
+            ],
+            "system": [
+                {
+                    "article_id": 43,
+                    "article_number": "505011",
+                    "label": "A_SOS",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1430.8,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.036669,
+                    "total_price": 52.47,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 44,
+                    "article_number": "505014",
+                    "label": "A_RIM",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1430.8,
+                    "unit_type": "EUR_per_kWh",
+                    "unit_price": 0.004773,
+                    "total_price": 6.83,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 80,
+                    "article_number": "505015",
+                    "label": "A_RIM",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 0.08493150684931507,
+                    "unit_type": "EUR_per_year",
+                    "unit_price": 9.684,
+                    "total_price": 0.82,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 47,
+                    "article_number": "505016",
+                    "label": "A_RIM",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1.273972602739726,
+                    "unit_type": "EUR_per_kW_and_year",
+                    "unit_price": 12.2664,
+                    "total_price": 15.63,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 45,
+                    "article_number": "505013",
+                    "label": "A_SOS",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1.273972602739726,
+                    "unit_type": "EUR_per_kW_and_year",
+                    "unit_price": 13.2732,
+                    "total_price": 16.91,
+                    "vat_percentage": 0.22
+                },
+                {
+                    "article_id": 75,
+                    "article_number": "505012",
+                    "label": "A_SOS",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 0.08493150684931507,
+                    "unit_type": "EUR_per_year",
+                    "unit_price": 10.4796,
+                    "total_price": 0.89,
+                    "vat_percentage": 0.22
+                }
+            ],
+            "tax": [
+                {
+                    "article_id": null,
+                    "article_number": null,
+                    "label": "Excise",
+                    "period_start": "2024-01-01",
+                    "period_end": "2024-01-31",
+                    "estimated": false,
+                    "unit": 1430.8,
+                    "unit_type": "kWh",
+                    "unit_price": 0.0125,
+                    "total_price": 17.89,
+                    "vat_percentage": 0.22
+                }
+            ]
+        },
+        "hist_data": {
+            "2024-01": {
+                "active": {
+                    "F1": 778.57,
+                    "F2": 290.22,
+                    "F3": 362.02
+                },
+                "peak": 11.74,
+                "total_cost": 2307.19
+            }
+        }
+    },
+    "payment_status": false
+}

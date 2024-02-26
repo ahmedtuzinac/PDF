@@ -1,0 +1,221 @@
+{
+    "invoice_date": "2024-01-01",
+    "invoice_number": "BOL230123",
+    "invoice_period": {
+        "start": "2023-12-01",
+        "end": "2023-12-31"
+    },
+    "client": {
+        "uuid": "2a89185f-5714-463f-9f92-9ecbe10f682d",
+        "number": "18",
+        "address": "Street a",
+        "municipality": "Roma",
+        "postal_code": "1232",
+        "tax_number": "ASDSGASD3423C"
+    },
+    "contract": {
+        "contract_start": "2023-01-01",
+        "power_commited": 3,
+        "power_available": 3.3,
+        "domestic": true,
+        "first_residence": true,
+        "product": "Flex01-TDR",
+        "pod": {
+            "number": "IT005E0003213",
+            "address": "Street B",
+            "municipality": "Roma",
+            "postal_code": "1232",
+            "voltage": 230
+        }
+    },
+    "payment": {
+        "due_date": "2024-03-01",
+        "status": [
+            {"BOL123123": true},
+            {"BOL232142": false}
+        ]
+    },
+    "summary": {
+        "total_consumption_kwh": 324,
+        "total_amount": 142.32,
+        "payment_due": "2024-02-01",
+        "payment_method": "SEPA",
+        "tax": {
+            "excise": {
+                "unit_price": 0.0227,
+                "total": 12.03
+            },
+            "vat": 13.02
+        },
+        "components": {
+            "energy": 52.2,
+            "transport": 15.2,
+            "system": 13.2
+        },
+        "metering": [
+            {
+                "type": "active",
+                "date": "2023-12-01",
+                "f1": 123,
+                "f2": 234,
+                "f3": 345
+            },
+            {
+                "type": "active",
+                "date": "2023-12-31",
+                "f1": 234,
+                "f2": 345,
+                "f3": 355
+            },
+            {
+                "type": "peak",
+                "date": "2023-12-31",
+                "f1": 234,
+                "f2": 345,
+                "f3": 355
+            },
+            {
+                "type": "reactive",
+                "date": "2023-12-31",
+                "f1": 234,
+                "f2": 345,
+                "f3": 355
+            }
+        ],
+        "additional_cost": [
+            {
+                "label": "RAI 2023/12",
+                "amount": 9
+            }
+        ],
+        "network_operator": {
+            "name": "Edyna",
+            "tel_number": "+39 0421 123455"
+        }
+    },
+    "detail": {
+        "energy": [
+            {
+                "label": "DispBT",
+                "period_start": "2023-12-01",
+                "period_end": "2023-12-31",
+                "estimated": false,
+                "unit": 23,
+                "unit_type": "days",
+                "unit_price": 0.09423,
+                "total_price": 23.2,
+                "vat_percentage": 10
+            },
+            {
+                "label": "CVS",
+                "period_start": "2023-12-01",
+                "period_end": "2023-12-31",
+                "estimated": false,
+                "unit": 23,
+                "unit_type": "days",
+                "unit_price": 0.09423,
+                "total_price": 23.2,
+                "vat_percentage": 10
+            }
+        ],
+        "transport": [
+            {
+                "label": "Label a",
+                "period_start": "2023-12-01",
+                "period_end": "2023-12-31",
+                "estimated": false,
+                "unit": 23,
+                "unit_type": "days",
+                "unit_price": 0.09423,
+                "total_price": 23.2,
+                "vat_percentage": 10
+            },
+            {
+                "label": "Label B",
+                "period_start": "2023-12-01",
+                "period_end": "2023-12-31",
+                "estimated": false,
+                "unit": 23,
+                "unit_type": "days",
+                "unit_price": 0.09423,
+                "total_price": 23.2,
+                "vat_percentage": 20
+            }
+        ],
+        "system": [
+            {
+                "label": "system a",
+                "period_start": "2023-12-01",
+                "period_end": "2023-12-31",
+                "estimated": false,
+                "unit": 23,
+                "unit_type": "days",
+                "unit_price": 0.09423,
+                "total_price": 23.2,
+                "vat_percentage": 10
+            },
+            {
+                "label": "system b",
+                "period_start": "2023-12-01",
+                "period_end": "2023-12-31",
+                "estimated": false,
+                "unit": 23,
+                "unit_type": "days",
+                "unit_price": 0.09423,
+                "total_price": 23.2,
+                "vat_percentage": 10
+            }
+        ],
+        "tax": [
+            {
+                "label": "DispBT",
+                "period_start": "2023-12-01",
+                "period_end": "2023-12-31",
+                "estimated": false,
+                "unit": 23,
+                "unit_type": "days",
+                "unit_price": 0.09423,
+                "total_price": 23.2,
+                "vat_percentage": 10
+            }
+        ]
+    },
+    "hist_data": {
+        "2023-01": {
+            "active": {
+                "F1": 231,
+                "F2": 231,
+                "F3": 931
+            },
+            "peak": 1234,
+            "total_cost": 342342
+        },
+        "2023-02": {
+            "active": {
+                "F1": 1200,
+                "F2": 500,
+                "F3": 900
+            },
+            "peak": 1234,
+            "total_cost": 342342
+        },
+        "2023-03": {
+            "active": {
+                "F1": 500,
+                "F2": 501,
+                "F3": 900
+            },
+            "peak": 1234,
+            "total_cost": 342342
+        },
+        "2023-04": {
+            "active": {
+                "F1": 900,
+                "F2": 903,
+                "F3": 501
+            },
+            "peak": 1234,
+            "total_cost": 342342
+        }
+    }
+}
