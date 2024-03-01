@@ -119,7 +119,7 @@
                     "label": "PCV",
                     "period_start": "2024-01-01",
                     "period_end": "2024-01-31",
-                    "estimated": false,
+                    "estimated": true,
                     "unit": 0.08493150684931507,
                     "unit_type": "EUR_per_year",
                     "unit_price": 162.0,

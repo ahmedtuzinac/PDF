@@ -27,8 +27,7 @@ class EnergyPdfGenerator:
     yaml_file_path = str(pathlib.Path(__file__).parent / 'utils/placeholders.yaml')
     template_filepath_it = str(pathlib.Path(__file__).parent / "templates/energy_template_it.docx")
     template_filepath_de = str(pathlib.Path(__file__).parent / "templates/energy_template_de.docx")
-    # docx_temp_folder = f"/tmp/{uuid.uuid4()}"
-    docx_temp_folder = f"{pathlib.Path(__file__).parent.parent}/tmp/{uuid.uuid4()}"
+    docx_temp_folder = f"/tmp/{uuid.uuid4()}"
     docx_temp_filepath = f"{docx_temp_folder}/document.docx"
     pdf_temp_filepath = f"{docx_temp_folder}/document.pdf"
     dynamic_tables = [
@@ -38,7 +37,7 @@ class EnergyPdfGenerator:
         'IMPOSTE'
     ]
 
-    def __init__(self, invoice_data: dict, language: str, client_data: dict):
+    def __init__(self, invoice_data: dict, language: str, client_data):
         self.invoice_data = invoice_data
         self.language = language
         self.client_data = client_data
@@ -90,8 +89,18 @@ class EnergyPdfGenerator:
 
         insert_data = []
         for item in detail_data:
-            if item['label'] == 'sigma2':
-                ...
+            lettura = ''
+            if item.get('estimated'):
+                if self.language == 'it':
+                    lettura = 'stimate'
+                else:
+                    lettura = 'geschätzt'
+            else:
+                if self.language == 'it':
+                    lettura = 'effetive'
+                else:
+                    lettura = 'tatsächlich'
+
             insert_data.append([
                 item['label'],
                 f'{self.format_date(item["period_start"])} - {self.format_date(item["period_end"])}',
@@ -99,7 +108,7 @@ class EnergyPdfGenerator:
                 str(item['unit_price']).replace('.', ','),
                 str(item['unit']),
                 str(item['total_price']),
-                '',
+                f'{lettura}',
                 f'{str(int(item["vat_percentage"] * 100))}%'
             ])
 
@@ -159,8 +168,8 @@ class EnergyPdfGenerator:
         profile_uri = f"file://{unique_profile_dir}"  # Convert the path to a URI
 
         cmd = [
-            #"soffice",
             '/Applications/LibreOffice.app/Contents/MacOS/soffice',
+            # "soffice",
             '--headless',
             '--convert-to', 'pdf',
             self.docx_temp_filepath,
@@ -266,13 +275,3 @@ class EnergyPdfGenerator:
         if os.path.exists(hist_chart_filepath):
             os.remove(hist_chart_filepath)
         return self.docx_temp_folder, self.pdf_temp_filepath
-
-
-if __name__ == '__main__':
-    with open('invoice_data.json', 'r') as file:
-        data = json.load(file)
-
-    language = input('Select language: ')
-    pdf_gen = EnergyPdfGenerator(data, language)
-    docx_folder, pdf_file_path = pdf_gen.generate_pdf()
-    print(pdf_file_path)

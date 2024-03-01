@@ -1,10 +1,10 @@
 classic:
   n_d_f: '["invoice_json"]["invoice_number"]'
   address: '["invoice_json"]["client"]["address"]'
-  # number: '["invoice_json"]["client"]["number"]'
+  number: '["invoice_json"]["client"]["number"]'
   m: '["invoice_json"]["client"]["municipality"]'
   p: '["invoice_json"]["client"]["postal_code"]'
-  pod_addr: '["invoice_json"]["contract"]["pod"]["address"]'
+  pod_addr: '["invoice_json"]["contract"]["pod"]["postal_code"]'
   pod_postal: '["invoice_json"]["contract"]["pod"]["postal_code"]'
   pod_city: '["invoice_json"]["contract"]["pod"]["municipality"]'
   telephone: '["invoice_json"]["summary"]["network_operator"]["tel_number"]'

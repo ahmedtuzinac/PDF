@@ -24,9 +24,9 @@ def get_data_for_dettaglio_iva(json_content):
             totale += components[item]
         totale += float(json_content['invoice_json']['summary']['tax']['excise']['total'])
         iva = json_content['invoice_json']['summary']['tax']['vat']
-
+        iva_percentage = json_content['invoice_json']['summary']['tax']['vat_rate']
         data = [
-            ['10 - Iva ? %', str(totale).replace('.', ','), '', iva],
+            [f'10 - Iva  {iva_percentage}', str(totale).replace('.', ','), '', iva],
             ['TOTALE IVA', '', '', iva]
         ]
 
@@ -104,8 +104,8 @@ def get_data_for_iva_last_page(json_content):
             totale += components[item]
         totale += float(json_content['invoice_json']['summary']['tax']['excise']['total'])
         iva = json_content['invoice_json']['summary']['tax']['vat']
-
-        data = [['', '', str(round(totale, 2)), '', str(iva), '', '?']]
+        iva_percentage = json_content['invoice_json']['summary']['tax']['vat_rate']
+        data = [['', '', str(round(totale, 2)), '', str(iva), '', f'{iva_percentage}%']]
         return data
     except Exception as e:
         raise Exception('Data for Iva(last_page) isnt valid.')

@@ -94,37 +94,7 @@ import numpy as np
 
 
 def create_donut_chart(json_content: dict):
-    labels, sizes = get_values_for_donut_chart(json_content)
-    colors = [
-        (156 / 255, 182 / 255, 154 / 255),
-        (209 / 255, 228 / 255, 207 / 255)
-    ]
-
-    # Create a pie chart
-    fig, ax = plt.subplots()
-
-    # Draw the outer circle (donut shape)
-    wedges, texts = ax.pie(sizes, startangle=90, wedgeprops=dict(width=0.35, edgecolor='w'), colors=colors)
-
-    # Draw a white circle in the center to create the donut hole
-    center_circle = plt.Circle((0, 0), 0.6, color='white', fc='white', linewidth=1.25)
-    ax.add_patch(center_circle)
-
-    angles = [0] + [w.theta2 for w in wedges]
-    mid_angles = [(a + b) / 2.0 for a, b in zip(angles[:-1], angles[1:])]
-
-    angle1 = (wedges[0].theta2 + wedges[1].theta1) / 2.0
-    angle2 = (wedges[1].theta2 + wedges[0].theta1) / 2.0
-    angle1_rad = np.deg2rad(angle1)
-    angle2_rad = np.deg2rad(angle2 + 180)
-    line_length_factor = 1.7
-
-    ax.plot([0, line_length_factor * 0.70 * np.cos(angle1_rad)], [0, line_length_factor * 0.70 * np.sin(angle1_rad)], linestyle='-', color=(61 / 255, 81 / 255, 45 / 255),
-            linewidth=1)
-    ax.plot([0, line_length_factor * 0.70 * np.cos(angle2_rad)], [0, line_length_factor * 0.70 * np.sin(angle2_rad)], linestyle='-', color=(61 / 255, 81 / 255, 45 / 255),
-            linewidth=1)
-
-    ax.axis('equal')
+    
 
     # plt.show()
     donut_chart_filepath = f"/tmp/{uuid.uuid4()}.png"

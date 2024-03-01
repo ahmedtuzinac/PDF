@@ -50,7 +50,7 @@ def get_placeholders_from_invoice(invoice_json: dict, yaml_file_path: str, langu
                     try:
                         result = result[key]
                     except Exception as e:
-                        Exception(f'{placeholder} not found at json{value}, problematic key is ["{key}"]')
+                        print(f'{placeholder} not found at json{value}, problematic key is ["{key}"]')
                         result = None
 
                 if result:
@@ -82,7 +82,7 @@ def get_hist_placeholders(json_content: dict) -> dict:
         if item.split('-')[0] == str(current_year):
             f1 = hist_data[item]['active']['F1']
             f2 = hist_data[item]['active']['F2']
-            f3 = hist_data[item]['active']['F2']
+            f3 = hist_data[item]['active']['F3']
             f1_t += f1
             f2_t += f2
             f3_t += f3
@@ -168,6 +168,16 @@ def get_specified_placeholders_map(json_data: dict, language: str) -> dict:
         print("Key not found in json: Key: ", e)
         raise
     return {
+        'client_name': 'John Doe',
+        'codice_cliente': '9455',
+        'codice_fiscale': '123456789',
+        'codice_destinatario': 'New York',
+        'letter2': 'RM',
+        'offerta': 'Test Case',
+        'codice_offerta': '7777-7777-7777',
+        'codice_pod': '888 888 888',
+        'tipologia': 'test case',
+        'contratto': '123',
         'pd': get_info_date(json_content['payment']['due_date'], language).split('-')[0],
         'pm': get_info_date(json_content['payment']['due_date'], language).split('-')[1],
         'py': get_info_date(json_content['payment']['due_date'], language).split('-')[2],
