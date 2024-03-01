@@ -163,13 +163,21 @@ class EnergyPdfGenerator:
         except Exception as e:
             raise
 
+    def delete_televisione(self):
+        additional_costs = self.invoice_data['invoice_json']['summary']['additional_cost']
+        if len(additional_costs) == 0:
+            table = self.tables_map['TOTALE_BOLLETA_1']['table']
+            self.delete_identification_row(table)
+            table = self.doc.tables[24]
+            self.delete_identification_row(table)
+
     def convert_to_pdf(self) -> None:
         unique_profile_dir = os.path.join("/tmp", f"libreoffice_profile_{uuid.uuid4()}")
         profile_uri = f"file://{unique_profile_dir}"  # Convert the path to a URI
 
         cmd = [
-            '/Applications/LibreOffice.app/Contents/MacOS/soffice',
-            # "soffice",
+
+            "soffice",
             '--headless',
             '--convert-to', 'pdf',
             self.docx_temp_filepath,
@@ -256,6 +264,7 @@ class EnergyPdfGenerator:
                 'header_row': doc.tables[23].rows[0]
             }
         }
+        self.delete_televisione()
         self.add_data_to_dynamic_tables()
         self.add_data_to_specific_tables()
         bar_chart_filepath = create_bar_chart(self.invoice_data)

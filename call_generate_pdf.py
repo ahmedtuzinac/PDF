@@ -20,7 +20,7 @@ if __name__ == "__main__":
                    'codice_pod': 'test',
                    'tipologia': 'test',
                    'contratto': 'test', }
-    energy_pdf_generator = EnergyPdfGenerator(invoice_data, "de", client_data)
+    energy_pdf_generator = EnergyPdfGenerator(invoice_data, "it", client_data)
 
     invoice_folder, invoice_filepath = energy_pdf_generator.generate_pdf()
     print('#' * 50)
